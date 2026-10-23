@@ -1,0 +1,60 @@
+:root {
+  --text: #5d6573;
+  --text-h: #17202e;
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --border: #e2e7ef;
+  --accent: #e85d4a;
+  --accent-dark: #c84838;
+  --blue: #3678b8;
+  --shadow: 0 18px 45px rgba(34, 48, 69, 0.09);
+  --sans: 'Avenir Next', 'Trebuchet MS', sans-serif;
+  --heading: Georgia, 'Times New Roman', serif;
+
+  font: 16px/1.5 var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(232, 93, 74, 0.1), transparent 28rem),
+    var(--bg);
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+}
+h2 {
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+p {
+  margin: 0;
+}
+
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}

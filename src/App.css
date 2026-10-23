@@ -1,0 +1,168 @@
+.App {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 56px 0 72px;
+}
+
+.App > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.App > div:first-child a {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.App > div:first-child a:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.logo {
+  width: 21px;
+  height: 21px;
+}
+
+.App > h1 {
+  max-width: 620px;
+  margin: 0 0 40px;
+}
+
+.App > h1::before {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--accent);
+  content: 'PEOPLE DIRECTORY / 2026';
+  font: 700 0.72rem/1 var(--sans);
+  letter-spacing: 0.16em;
+}
+
+.card {
+  display: inline-flex;
+  vertical-align: top;
+  box-sizing: border-box;
+  width: calc(50% - 12px);
+  min-height: 190px;
+  margin: 0 20px 24px 0;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow);
+}
+
+.card:nth-of-type(n + 4) {
+  width: calc(33.333% - 17px);
+  min-height: 225px;
+}
+
+.card:nth-of-type(3n + 1) {
+  margin-right: 0;
+}
+
+.counter {
+  width: 100%;
+}
+
+.counter h2,
+.profile-card h2 {
+  margin: 0 0 18px;
+}
+
+.counter p {
+  margin-bottom: 20px;
+  color: var(--text-h);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+button {
+  padding: 11px 18px;
+  border: 0;
+  border-radius: 9px;
+  color: #fff;
+  background: var(--accent);
+  font: 700 0.9rem var(--sans);
+  cursor: pointer;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+button:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(54, 120, 184, 0.38);
+  outline-offset: 3px;
+}
+
+.profile-card {
+  width: 100%;
+}
+
+.profile-card h2 {
+  color: var(--text-h);
+  font-size: 1.3rem;
+  overflow-wrap: anywhere;
+}
+
+.profile-card p {
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.profile-card ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-card li {
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--blue);
+  background: #edf5fc;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.read-the-docs {
+  margin: 0 0 30px;
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 760px) {
+  .App {
+    width: min(100% - 28px, 560px);
+    padding: 32px 0 48px;
+  }
+
+  .App > h1 {
+    margin-bottom: 28px;
+  }
+
+  .card,
+  .card:nth-of-type(n + 4) {
+    display: flex;
+    width: 100%;
+    min-height: 0;
+    margin-right: 0;
+    padding: 22px;
+  }
+}
